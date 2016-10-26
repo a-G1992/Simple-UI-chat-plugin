@@ -12,7 +12,7 @@ var cons = require('consolidate');
 app.engine('html', cons.swig)
 app.set('views', path.join(process.env.PWD, 'views'));
 app.set('view engine', 'html');
-app.use('/demo', routes);
+app.use('/', routes);
 
 
 var server = app.listen(3333, function() {
